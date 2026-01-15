@@ -1,0 +1,23 @@
+name: Do all the things
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  set-version:
+    runs-on: ubuntu-latest
+    name: set-version
+    permissions:
+      contents: read
+    steps:
+      - name: do one thing
+        id: do-thing
+        uses: ntnu-ws/fantastiskaction@v1
+
+  
