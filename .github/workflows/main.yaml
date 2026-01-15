@@ -10,9 +10,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  set-version:
+  do-it:
     runs-on: ubuntu-latest
-    name: set-version
+    name: do-it
     permissions:
       contents: read
     steps:
